@@ -7,7 +7,7 @@ const route = useRoute()
 const postId = parseInt(route.params.id)
 
 const post = computed(() => {
-  return blogPosts.find((p) => p.id === postId)
+  return experiences.find((p) => p.id === postId)
 })
 </script>
 
