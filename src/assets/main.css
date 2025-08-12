@@ -1,0 +1,42 @@
+:root {
+  --color-primary: #2f9c95;
+  --color-primary2: #113d3a;
+  --color-accent: #40c9a2;
+  --color-secondary: #a3f7b5;
+  --color-background: #e5f9e0;
+  --color-text: #052321;
+  --color-white: #ffffff;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-background);
+  font-family: 'Poppins', sans-serif;
+}
+
+.font-heading {
+  font-family: 'Merriweather', serif;
+}
+
+/* Transisi Halaman (Fade) */
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.25s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+/* Transisi Halaman (Slide + Fade) */
+.slide-fade-enter-active,
+.slide-fade-leave-active {
+  transition: all 0.3s ease-out;
+}
+
+.slide-fade-enter-from,
+.slide-fade-leave-to {
+  transform: translateX(20px);
+  opacity: 0;
+}
