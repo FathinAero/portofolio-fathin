@@ -1,24 +1,24 @@
 <script setup>
 import { RouterLink } from 'vue-router'
-import { blogPosts } from '@/data/experiences.js'
+import { experiences } from '@/data/experiences.js'
 </script>
 
 <template>
-  <div class="blog-page">
-    <h1>Blog</h1>
-    <p class="subtitle">
-      Tulisan saya tentang teknologi, pemrograman, dan hal-hal lain yang menarik.
-    </p>
-    <div class="post-list">
-      <div v-for="post in blogPosts" :key="post.id" class="post-summary">
-        <h2>
-          <RouterLink :to="'/blog/' + post.id">{{ post.title }}</RouterLink>
-        </h2>
-        <p class="post-date">{{ post.date }}</p>
-        <p>{{ post.summary }}</p>
-        <RouterLink :to="'/blog/' + post.id" class="read-more">Baca Selengkapnya →</RouterLink>
-      </div>
-    </div>
+  <div v-for="post in blogPosts" :key="post.id" class="post-summary">
+    <h2>
+      <RouterLink :to="'/blog/' + post.id">{{ post.title }}</RouterLink>
+    </h2>
+  </div>
+
+  <div v-for="experience in experiences" :key="experience.id" class="post-summary">
+    <h2>
+      <RouterLink :to="'/experiences/' + experience.id">{{ experience.title }}</RouterLink>
+    </h2>
+    <p class="post-date">{{ experience.date }}</p>
+    <p>{{ experience.summary }}</p>
+    <RouterLink :to="'/experiences/' + experience.id" class="read-more"
+      >Baca Selengkapnya →</RouterLink
+    >
   </div>
 </template>
 

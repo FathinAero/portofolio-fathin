@@ -1,5 +1,3 @@
-// src/data/blogPosts.js
-
 export const experiences = [
   {
     id: 1,
